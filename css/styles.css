@@ -891,3 +891,56 @@ html {
   transition: background .17s;
 }
 .btn-main.btn-wsp:hover { background: #128C7E; }
+
+/* ============================
+   MEDIA QUERIES: MOBILE DESIGN
+   ============================ */
+@media (max-width: 600px) {
+  .logo-hero-esquina {
+    width: 70vw;
+    max-width: 220px;
+    margin-top: 0.5em;
+  }
+  .hero-slider-wrap {
+    height: 140px;
+    min-height: 80px;
+  }
+  .main-navbar {
+    padding: 0.5em 0.2em;
+  }
+  .main-navbar .nav-links {
+    flex-wrap: wrap;
+    gap: 0.3em;
+    font-size: 1em;
+  }
+  .cart-icon {
+    padding: 0.15em 0.7em;
+    font-size: 1em;
+    min-width: 58px;
+  }
+  .menu-grid {
+    grid-template-columns: 1fr;
+    gap: 1em;
+    padding: 0 0.1em;
+  }
+  .menu-card {
+    padding: 0.6em 0.2em;
+    border-radius: 1em;
+  }
+  .menu-card img {
+    height: 130px;
+    border-radius: 1em 1em 0 0;
+  }
+  .categories-bar {
+    font-size: 1em;
+    padding: 0.5em 0;
+    flex-wrap: wrap;
+    gap: 0.5em;
+  }
+  .btn-main {
+    font-size: 1em;
+    min-width: 70px;
+    padding: 0.4em 0.8em;
+    margin: 0.07em;
+  }
+}
