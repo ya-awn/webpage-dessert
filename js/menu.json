@@ -1,0 +1,144 @@
+[
+  {
+    "id": 1,
+    "nombre": "Cheesecake de Frutos Rojos",
+    "descripcion": "Base crocante y crema suave con frutos rojos frescos.",
+    "precio": 3200,
+    "imagenes": ["cheesecake.jpg"],
+    "categoria": "Tortas"
+  },
+  {
+    "id": 2,
+    "nombre": "Brownie con Nueces",
+    "descripcion": "Brownie húmedo con trozos de nuez y chocolate.",
+    "precio": 2000,
+    "imagenes": ["brownie.jpg"],
+    "categoria": "Barritas"
+  },
+  {
+    "id": 3,
+    "nombre": "Cookies de Chocolate",
+    "descripcion": "Galletas con chips de chocolate, recién horneadas.",
+    "precio": 1100,
+    "imagenes": ["cookies.jpg"],
+    "categoria": "Galletas"
+  },
+  {
+    "id": 4,
+    "nombre": "Tiramisú Clásico",
+    "descripcion": "Postre italiano con crema de mascarpone, café y cacao.",
+    "precio": 2500,
+    "imagenes": ["tiramisu.jpg"],
+    "categoria": "Postres"
+  },
+  {
+    "id": 5,
+    "nombre": "Lemon Pie",
+    "descripcion": "Base de masa dulce, crema de limón y merengue.",
+    "precio": 2300,
+    "imagenes": ["lemonpie.jpg"],
+    "categoria": "Tartas"
+  },
+  {
+    "id": 6,
+    "nombre": "Red Velvet Cake",
+    "descripcion": "Bizcocho rojo y húmedo con crema de queso.",
+    "precio": 2800,
+    "imagenes": ["redvelvet.jpg"],
+    "categoria": "Tortas"
+  },
+  {
+    "id": 7,
+    "nombre": "Carrot Cake",
+    "descripcion": "Pastel de zanahoria con nueces y frosting de queso.",
+    "precio": 2400,
+    "imagenes": ["carrotcake.jpg"],
+    "categoria": "Tortas"
+  },
+  {
+    "id": 8,
+    "nombre": "Rosca de Pascua",
+    "descripcion": "Rosca tradicional decorada con crema pastelera.",
+    "precio": 2900,
+    "imagenes": ["rosca.jpg"],
+    "categoria": "Roscas"
+  },
+  {
+    "id": 9,
+    "nombre": "Rosca de Chocolate",
+    "descripcion": "Rosca rellena y cubierta de chocolate.",
+    "precio": 3100,
+    "imagenes": ["rosca_chocolate.jpg"],
+    "categoria": "Roscas"
+  },
+  {
+    "id": 10,
+    "nombre": "Mini Pepitos",
+    "descripcion": "Galletitas mini con chips de chocolate.",
+    "precio": 900,
+    "imagenes": ["mini_pepitos.jpg"],
+    "categoria": "Galletas"
+  },
+  {
+    "id": 11,
+    "nombre": "Chocotorta",
+    "descripcion": "Torta fría de galletitas de chocolate y dulce de leche.",
+    "precio": 2200,
+    "imagenes": ["torta_chocolate.jpg"],
+    "categoria": "Tortas"
+  },
+  {
+    "id": 12,
+    "nombre": "Trifle de Frutilla",
+    "descripcion": "Vaso con bizcocho, crema y frutillas frescas.",
+    "precio": 1300,
+    "imagenes": ["triflef.jpg"],
+    "categoria": "Postres"
+  },
+  {
+    "id": 13,
+    "nombre": "Trifle de Chocolate",
+    "descripcion": "Vaso con capas de chocolate, crema y vainillas.",
+    "precio": 1500,
+    "imagenes": ["trifle.jpg"],
+    "categoria": "Postres"
+  },
+  {
+    "id": 14,
+    "nombre": "Chocolate Bunny Tableta",
+    "descripcion": "Tableta de chocolate artesanal con forma de conejo. ¡Desliza para ver todos los modelos!",
+    "precio": 800,
+    "imagenes": [
+      "chocolate_bunny.jpg",
+      "chocolate_bunny2.jpg",
+      "chocolate_bunny3.jpg",
+      "chocolate_bunny4.jpg",
+      "chocolate_bunny5.jpg"
+    ],
+    "categoria": "Chocolate"
+  },
+  {
+    "id": 15,
+    "nombre": "Chocolate Tableta Especial",
+    "descripcion": "Tableta de chocolate con diseño especial.",
+    "precio": 850,
+    "imagenes": ["chocolate_tableta.jpg"],
+    "categoria": "Chocolate"
+  },
+  {
+    "id": 16,
+    "nombre": "Chocolate Cake",
+    "descripcion": "Bizcochuelo húmedo de chocolate y baño especial.",
+    "precio": 1900,
+    "imagenes": ["chocolate_cake.jpg"],
+    "categoria": "Tortas"
+  },
+  {
+    "id": 101,
+    "nombre": "Combo Merienda",
+    "descripcion": "2 cookies, 1 porción de cheesecake y 1 muffin.",
+    "precio": 3500,
+    "imagenes": ["combo.jpg"],
+    "categoria": "combo"
+  }
+]

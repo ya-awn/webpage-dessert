@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Repostería de Yoly</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Pacifico|Nunito:400,600,700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- HERO SLIDER DECORATIVO -->
+  <div class="hero-slider-wrap">
+    <div class="hero-slider-bg" id="hero-slider-bg"></div>
+    <img src="images/logo-yoly.png" alt="Repostería artesanal Yoly" class="logo-hero-esquina">
+    <div class="hero-welcome-centered mejor-welcome">
+      <h1>¡Bienvenido a la dulzura!</h1>
+      <p>Delicias caseras para cada momento. Hecho con amor, para vos.</p>
+    </div>
+  </div>
+
+  <!-- NAVBAR PRINCIPAL -->
+  <nav class="main-navbar">
+    <ul class="nav-links">
+      <li><a href="#menu-section">Menú</a></li>
+      <li><a href="#ofertas-section">Ofertas</a></li>
+      <li><a href="#combos-section">Combos</a></li>
+      <li><a href="#" id="btn-galeria">Galería</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <div class="cart-icon" id="cart-icon">
+      <!-- SVG del carrito -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#fff" viewBox="0 0 24 24">
+        <path d="M7 18c-1.104 0-1.99.896-1.99 2s.886 2 1.99 2c1.105 0 2-.896 2-2s-.895-2-2-2zm10 0c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm-13.3-2l.94-2h12.72c.68 0 1.28-.52 1.39-1.19l1.68-8.49a1 1 0 00-.98-1.31h-14.36l-.27-1.33a1 1 0 00-.98-.8h-2v2h1.24l2.42 11.48a2.99 2.99 0 002.9 2.32h9.86v-2h-9.86c-.26 0-.49-.19-.56-.44z"/>
+      </svg>
+      <span id="cartCount">0</span>
+    </div>
+  </nav>
+
+  <!-- MENÚ GENERAL -->
+  <section class="menu-section" id="menu-section">
+    <h2 class="titulo-menu">Menú</h2>
+    <nav class="categories-bar" id="categories-bar"></nav>
+    <div class="container-search">
+      <input id="buscar" type="text" class="input-search" placeholder="Buscar producto...">
+    </div>
+    <div class="menu-grid" id="menu-grid"></div>
+  </section>
+
+  <!-- OFERTAS & COMBOS -->
+  <section class="ofertas-section" id="ofertas-section">
+    <h2>Ofertas & Combos</h2>
+    <div class="menu-grid" id="ofertas-slider"></div>
+  </section>
+
+  <!-- MODAL DE CARRITO -->
+  <div class="cart-modal" id="cart-modal" style="display:none;" onclick="toggleCart()">
+    <div class="cart-content" onclick="event.stopPropagation()">
+      <button class="close-modal" onclick="toggleCart()">×</button>
+      <h2>
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#e02575" viewBox="0 0 24 24" style="vertical-align:middle; margin-right:8px;">
+          <path d="M7 18c-1.104 0-1.99.896-1.99 2s.886 2 1.99 2c1.105 0 2-.896 2-2s-.895-2-2-2zm10 0c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm-13.3-2l.94-2h12.72c.68 0 1.28-.52 1.39-1.19l1.68-8.49a1 1 0 00-.98-1.31h-14.36l-.27-1.33a1 1 0 00-.98-.8h-2v2h1.24l2.42 11.48a2.99 2.99 0 002.9 2.32h9.86v-2h-9.86c-.26 0-.49-.19-.56-.44z"/>
+        </svg>
+        Mi pedido
+      </h2>
+      <div id="cart-items"></div>
+      <div class="cart-total-line">
+        <span>Total:</span> <span class="cart-total-num">$<span id="cart-total">0</span></span>
+      </div>
+      <a id="send-whatsapp" href="#" target="_blank" class="btn-main btn-wsp">Enviar consulta por WhatsApp</a>
+    </div>
+  </div>
+
+
+
+
+  <!-- MODAL DE IMAGEN AMPLIADA (para cada postre) -->
+  <div id="modal-img-bg" class="modal-img-bg" onclick="cerrarModalImg()">
+    <div class="modal-img-content" onclick="event.stopPropagation()">
+      <button class="modal-img-close" onclick="cerrarModalImg()">×</button>
+      <img id="modal-img-ampliada" src="" alt="Postre ampliado">
+    </div>
+  </div>
+
+  <!-- MODAL DE GALERÍA GLOBAL -->
+  <div id="modal-galeria-bg" class="modal-img-bg" onclick="cerrarModalGaleria()">
+    <div class="modal-img-content" onclick="event.stopPropagation()">
+      <button class="modal-img-close" onclick="cerrarModalGaleria()">×</button>
+      <div id="galeria-title" class="galeria-title"></div>
+      <div class="galeria-img-wrapper">
+        <button class="modal-flecha izq" id="galeria-prev-main">&#8678;</button>
+        <img id="galeria-img-main" src="" alt="Galería postre">
+        <button class="modal-flecha der" id="galeria-next-main">&#8680;</button>
+      </div>
+      <div class="galeria-thumbnails-bar">
+        <button class="modal-flecha izq" id="galeria-prev-thumb">&#8678;</button>
+        <div class="galeria-thumbnails" id="galeria-thumbnails"></div>
+        <button class="modal-flecha der" id="galeria-next-thumb">&#8680;</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAB WHATSAPP SIEMPRE FLOTANTE -->
+  <a class="whatsapp-fab" href="https://api.whatsapp.com/send?phone=54911XXXXXXXX" target="_blank" title="Hacé tu pedido">
+    <img src="images/whatsapp-icon.svg" alt="WhatsApp">
+  </a>
+
+  <!-- SECCIÓN FAQ -->
+  <section id="faq" class="faq-section">
+    <h2>Preguntas Frecuentes</h2>
+    <dl class="faq-list">
+      <div class="faq-item">
+        <dt>¿Cómo realizo un pedido?</dt>
+        <dd>Seleccioná tus productos, agregalos al carrito y hacé click en "Pedir por WhatsApp".</dd>
+      </div>
+      <div class="faq-item">
+        <dt>¿Cuáles son los métodos de pago?</dt>
+        <dd>Aceptamos efectivo, transferencia y Mercado Pago vía enlace en WhatsApp.</dd>
+      </div>
+      <div class="faq-item">
+        <dt>¿Hacen entregas a domicilio?</dt>
+        <dd>Sí, enviamos en CABA y GBA. Consultá zonas y costos por WhatsApp.</dd>
+      </div>
+      <div class="faq-item">
+        <dt>¿Tienen opciones sin gluten?</dt>
+        <dd>Contamos con algunos productos aptos sin gluten. Consultá disponibilidad.</dd>
+      </div>
+    </dl>
+  </section>
+
+  <!-- SECCIÓN CONTACTO -->
+  <section id="contacto" class="contact-section">
+    <h2>Contacto</h2>
+    <div class="contact-buttons">
+      <a href="https://api.whatsapp.com/send?phone=54911XXXXXXXX" target="_blank" class="whatsapp">
+        🟢 WhatsApp
+      </a>
+
+    </div>
+  </section>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
