@@ -944,3 +944,44 @@ html {
     margin: 0.07em;
   }
 }
+/* LOGO GRANDE CENTRADO SOLO EN MOBILE */
+.logo-mobile {
+  width: 100vw;
+  text-align: center;
+  padding-top: 2em;
+  padding-bottom: 1em;
+  background: transparent;
+  display: none;
+}
+.logo-mobile img {
+  width: 60vw;
+  max-width: 240px;
+  height: auto;
+}
+
+/* LOGO ESQUINA, SOLO DESKTOP */
+.logo-hero-esquina {
+  position: absolute;
+  top: 22px;
+  left: 30px;
+  width: 230px;
+  z-index: 20;
+  display: block;
+  pointer-events: none;
+  user-select: none;
+}
+
+@media (max-width: 600px) {
+  .logo-mobile { display: block; }
+  .logo-hero-esquina { display: none !important; }
+  .hero-slider-wrap {
+    min-height: 110px;
+    padding-top: 0;
+  }
+  .hero-welcome-centered {
+    top: 20%;
+    padding: 1em 0.7em;
+    border-radius: 1em;
+  }
+}
+
